@@ -25,6 +25,10 @@
                 padding: 30px;
             }
             
+            #logo:hover {
+                cursor: pointer;
+            }
+            
             .heading #business-name {
                 font-size: 36px;
                 position: absolute;
@@ -60,8 +64,8 @@
             .content {
                 padding: 10px;
                 position: absolute;
-                margin-top: 100px;
-                width: 100%;
+                margin-left: 100px;
+                margin-top: 70px;
             }
             
             #content-title {
@@ -77,26 +81,36 @@
                 font-size: 18px;
             }
             
-            .content input {
-                padding: 10px;
-                border-radius: 5px;
-                border: 1px solid #ECECEC;
-                width: 250px;
+            .buttons {
+                position: absolute;
+                margin-top: -150px;
+                margin-left: 800px;
             }
             
-            .content button {
+            .buttons button {
                 background-color: #168EEA;
                 color: white;
-                padding: 10px;
+                padding: 13px;
+                padding-right: 35px;
+                padding-left: 35px;
                 outline: none;
                 border: none;
-                width: 250px;
+                font-size: 1em;
+                width: 350px;
                 margin-bottom: 20px;
             }
             
-            .content button:hover {
+            .buttons button:hover {
                 cursor: pointer;
                 background-color: #0684E5;
+            }
+            
+            .buttons .fine-print {
+                font-size: 10px;
+                opacity: 0.7;
+                color: #252525;
+                float: left;
+                margin-top: -15px;
             }
             
             .footer {
@@ -146,19 +160,21 @@
                     (The traditions of the land are perpetuated by its youth)</span></center>
                 <img src="https://www.orbitmedia.com/wp-content/uploads/2016/08/header-roof-2.jpg">
             </div>
-            <center><span id="content-title">Here's how you can reach us:</span></center>
+            <center><span id="content-title">ʻImi Koni is a website platform that provides...</span></center>
             <div class="content">
+                <div class="description"><br />
+                        <ul>
+                            <li>A connection platform to volunteer opportunities for youth & groups</li><br />
+                            <li>A connection platform to eager student volunteers and that brings community<br />
+                                awareness of organizationsʻ work & mission</li>
+                        </ul>
+                    </div>
                 <center>
-                    <table cellspacing="20">
-                        <tr>
-                            <td><b>Email Address</b></td>
-                            <td><b>Phone Number</b></td>
-                        </tr>
-                        <tr>
-                            <td>hello@imikoni.org</td>
-                            <td>(808) 555-1234</td>
-                        </tr>
-                    </table>
+                    <div class="buttons">
+                        <button onclick="document.location = 'volunteer.html'">Join our Volunteer Community</button><br />
+                        <button onclick="document.location = 'organization.html'">Find Volunteers</button><br />
+                        <span class="fine-print">* Create a Business Account</span>
+                    </div>
                 </center>
             </div>
             <div class="footer">

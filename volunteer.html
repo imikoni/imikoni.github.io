@@ -1,7 +1,164 @@
-<!DOCTYPE html>
 <HTML>
     <head>
+        <title>Imikoni | Pursue your Passion</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta http-equiv="content-language" content="en-US">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="description" content="Providing students with mentorship and volunteer opportunities to pursue and discover their interests and community identity, to develop an individual who is set up for future success.">
+        <meta name="keywords" content="mentorship, mentor, apprentice, intern, internship, volunteer, opportunity, opportunities, high school, charity, work, connect, business, program">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122926033-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-122926033-1');
+        </script>
+        <style>
+            body {
+                margin: 0 auto;
+                font-family: 'Open Sans', Helvetica, sans-serif;
+            }
+            
+            .heading {
+                padding: 30px;
+            }
+            
+            .heading #business-name {
+                font-size: 36px;
+                position: absolute;
+                margin-top: 5px;
+                margin-left: 40px;
+                text-transform: uppercase;
+            }
+            
+            .heading .tab {
+                float: right;
+                text-transform: uppercase;
+                font-size: 13px;
+                margin-top: 16px;
+                margin-right: 75px;
+                font-weight: bold;
+                color: #168EEA;
+                text-decoration: none;
+            }
+            
+            .slideshow .overlay-text {
+                color: white;
+                position: absolute;
+                margin-top: 100px;
+                font-size: 28px;
+                margin-left: -500px;
+                width: 1000px;
+            }
+            
+            .slideshow img {
+                width: 100%;
+            }
+            
+            .content {
+                padding: 10px;
+                position: absolute;
+                margin-top: 120px;
+                width: 100%;
+            }
+            
+            #content-title {
+                font-size: 42px;
+                margin-top: 30px;
+                position: absolute;
+                margin-left: -28%;
+            }
+            
+            .content .description {
+                padding: 25px;
+                line-height: 22px;
+                font-size: 18px;
+            }
+            
+            .content input {
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #ECECEC;
+                width: 250px;
+            }
+            
+            .content button {
+                background-color: #168EEA;
+                color: white;
+                padding: 10px;
+                outline: none;
+                border: none;
+                width: 250px;
+                margin-bottom: 20px;
+            }
+            
+            .content button:hover {
+                cursor: pointer;
+                background-color: #0684E5;
+            }
+            
+            .footer {
+                width: 98.5%;
+                text-align: center;
+                padding: 8px;
+                border-top: 1px solid #ECECEC;
+                background-color: #FDFDFD;
+                position: absolute;
+                bottom: 0;
+                font-size: 12px;
+                color: #8b959e;
+                line-height: 35px;
+            }
+            
+            .footer a {
+                color: #333333;
+                text-decoration: none;
+            }
+            
+            @media only screen and (max-width: 600px) {
+                .heading .tab {
+                    position: absolute;
+                    margin-left: 50px;
+                }
+                
+                .heading img {
+                    margin-top: 11px;
+                }
+                
+                .heading #tab1 {
+                    margin-left: 200px;
+                }
+            }
+        </style>
     </head>
     <body>
+        <div class="container">
+            <div class="heading">
+                <img onclick="document.location = 'index.html'" src="logo.png" height="40px"> <!-- Logo Image URL -->
+                <!--<span id="business-name">'Imi koni</span>-->
+                <a id="tab1" class="tab" href="contact.html">Contact Us</a>
+                <a id="tab2" class="tab" href="howitworks.html">How It Works</a>
+            </div>
+            <div class="slideshow">
+                <center><span class="overlay-text"><b>E mālama ‘ia nā pono o ka ‘āina e na ‘ōpio.</b><br />
+                    (The traditions of the land are perpetuated by its youth)</span></center>
+                <img src="https://www.orbitmedia.com/wp-content/uploads/2016/08/header-roof-2.jpg">
+            </div>
+            <center><span id="content-title">Sorry! We aren't quite ready.</span></center>
+            <div class="content">
+                <center>
+                    <p>Enter your email address in order to be notified when the site goes live.<br />Mahalo for your interest.</p>
+                    <form method="POST" action="signup.html">
+                        <input name="email" type="email" placeholder="Email Address"><br />
+                        <button type="submit" value="Submit">Submit</button>
+                    </form>
+                </center>
+            </div>
+            <div class="footer">
+                Copyright &copy2018 Imikoni.org • <a href="#">Privacy</a> • <a href="#">Terms</a> • <a href="#">Security</a>
+            </div>
+        </div>
     </body>
 </HTML>
