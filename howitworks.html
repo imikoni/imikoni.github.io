@@ -16,6 +16,11 @@
           gtag('config', 'UA-122926033-1');
         </script>
         <style>
+            @font-face {
+                font-family: Imikoni;
+                src: url(imikoni.otf);
+            }
+            
             body {
                 margin: 0 auto;
                 font-family: 'Open Sans', Helvetica, sans-serif;
@@ -23,10 +28,6 @@
             
             .heading {
                 padding: 30px;
-            }
-            
-            #logo:hover {
-                cursor: pointer;
             }
             
             .heading #business-name {
@@ -37,6 +38,12 @@
                 text-transform: uppercase;
             }
             
+            #logo {
+                height: 120px;
+                position: absolute;
+                margin-top: -20px;
+            }
+            
             .heading .tab {
                 float: right;
                 text-transform: uppercase;
@@ -44,21 +51,24 @@
                 margin-top: 16px;
                 margin-right: 75px;
                 font-weight: bold;
-                color: #168EEA;
+                color: #F9BD45;
                 text-decoration: none;
             }
             
             .slideshow .overlay-text {
                 color: white;
                 position: absolute;
-                margin-top: 100px;
-                font-size: 28px;
+                margin-top: 130px;
+                font-size: 32px;
                 margin-left: -500px;
                 width: 1000px;
+                text-shadow: 0px 0px 14px rgba(150, 150, 150, 1);
+                font-family: 'Avenir Next Condensed';
             }
             
             .slideshow img {
                 width: 100%;
+                padding-top: 40px;
             }
             
             .content {
@@ -71,14 +81,16 @@
             #content-title {
                 font-size: 42px;
                 margin-top: 30px;
-                position: absolute;
-                margin-left: -28%;
+                font-family: 'Imikoni';
+                float: left;
+                margin-left: 150px;
             }
             
             .content .description {
                 padding: 25px;
                 line-height: 22px;
-                font-size: 18px;
+                font-size: 24px;
+                font-family: 'Avenir Next Condensed';
             }
             
             .buttons {
@@ -88,21 +100,28 @@
             }
             
             .buttons button {
-                background-color: #168EEA;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 13px;
+                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcbf32+0,f2ec7b+100 */
+                background: rgb(252,191,50); /* Old browsers */
+                background: -moz-linear-gradient(45deg, rgba(252,191,50,1) 0%, rgba(242,236,123,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(45deg, rgba(252,191,50,1) 0%,rgba(242,236,123,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(45deg, rgba(252,191,50,1) 0%,rgba(242,236,123,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcbf32', endColorstr='#f2ec7b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
                 color: white;
                 padding: 13px;
                 padding-right: 35px;
                 padding-left: 35px;
                 outline: none;
                 border: none;
-                font-size: 1em;
                 width: 350px;
                 margin-bottom: 20px;
             }
             
             .buttons button:hover {
                 cursor: pointer;
-                background-color: #0684E5;
+                background-color: #F9BD45;
             }
             
             .buttons .fine-print {
@@ -131,18 +150,129 @@
                 text-decoration: none;
             }
             
+            #section-students {
+                position: absolute;
+                font-size: 16px;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-top: -20px;
+            }
+            
+            #section-organizations {
+                position: absolute;
+                font-size: 16px;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-top: -20px;
+                margin-left: 130px;
+            }
+            
+            @media only screen and (max-width: 1250px) {
+                .content {
+                    height: 300px;
+                }
+                
+                .slideshow .overlay-text {
+                    font-size: 26px;
+                }
+                
+                .buttons {
+                    margin-left: 50px;
+                    margin-top: 0px;
+                    margin-bottom: 100px;
+                }
+                
+                .fine-print {
+                    margin-left: 360px;
+                }
+            }
+            
+            @media only screen and (max-width: 1050px) {
+                .slideshow .overlay-text {
+                    margin-left: -450px;
+                    margin-top: 110px;
+                    font-size: 20px;
+                }
+                
+                #content-title {
+                    margin-left: 40px;
+                }
+                
+                .content {
+                    margin-left: 0px;
+                    margin-top: 40px;
+                }
+            }
+            
+            @media only screen and (max-width: 800px) {
+                .slideshow .overlay-text {
+                    margin-left: -400px;
+                    margin-top: 90px;
+                }
+                
+                #content-title {
+                    font-size: 32px;
+                }
+            }
+            
             @media only screen and (max-width: 600px) {
-                .heading .tab {
-                    position: absolute;
+                #logo {
                     margin-left: 50px;
                 }
                 
-                .heading img {
-                    margin-top: 11px;
+                .tab {
+                    position: absolute;
+                    width: 100%;
                 }
                 
-                .heading #tab1 {
-                    margin-left: 200px;
+                .slideshow {
+                    margin-top: 30px;
+                }
+                
+                #tab1 {
+                    margin-top: 75px;
+                }
+                
+                #tab2 {
+                    margin-top: 75px;
+                    margin-left: 170px;
+                }
+                
+                #tab3 {
+                    margin-top: 75px;
+                    margin-left: 350px;
+                }
+                
+                .slideshow .overlay-text {
+                    font-size: 16px;
+                    position: absolute;
+                    margin-top: 70px;
+                    margin-left: -580px;
+                }
+                
+                #content-title {
+                    font-size: 22px;
+                    margin-left: 25px;
+                }
+                
+                .content {
+                    margin-left: -40px;
+                    margin-top: 20px;
+                    width: 100%;
+                }
+                
+                .content .description {
+                    font-size: 14px;
+                    margin-left: 25px;
+                }
+                
+                .buttons {
+                    margin-left: 50px;
+                    margin-top: 0px;
+                }
+                
+                .fine-print {
+                    margin-left: 60px;
                 }
             }
         </style>
@@ -150,32 +280,26 @@
     <body>
         <div class="container">
             <div class="heading">
-                <img onclick="document.location = 'index.html'" src="logo.png" height="40px"> <!-- Logo Image URL -->
+                <img onclick="document.location = 'index.html'" id="logo" src="logo.png"> <!-- Logo Image URL -->
                 <!--<span id="business-name">'Imi koni</span>-->
                 <a id="tab1" class="tab" href="contact.html">Contact Us</a>
                 <a id="tab2" class="tab" href="howitworks.html">How It Works</a>
+                <a id="tab3" class="tab" href="about.html">About Us</a>
             </div>
             <div class="slideshow">
                 <center><span class="overlay-text"><b>E mālama ‘ia nā pono o ka ‘āina e na ‘ōpio.</b><br />
                     (The traditions of the land are perpetuated by its youth)</span></center>
-                <img src="https://www.orbitmedia.com/wp-content/uploads/2016/08/header-roof-2.jpg">
+                <img src="banner.png">
             </div>
-            <center><span id="content-title">ʻImi Koni is a website platform that provides...</span></center>
+            <center><span id="content-title">How It Works</span></center>
             <div class="content">
                 <div class="description"><br />
-                        <ul>
-                            <li>A connection platform to volunteer opportunities for youth & groups</li><br />
-                            <li>A connection platform to eager student volunteers and that brings community<br />
-                                awareness of organizationsʻ work & mission</li>
-                        </ul>
-                    </div>
-                <center>
-                    <div class="buttons">
-                        <button onclick="document.location = 'volunteer.html'">Join our Volunteer Community</button><br />
-                        <button onclick="document.location = 'organization.html'">Find Volunteers</button><br />
-                        <span class="fine-print">* Create a Business Account</span>
-                    </div>
-                </center>
+                    <span id="section-students">Volunteers</span>
+                    <img src="howworks1.png" width="36%">
+                    <span id="section-organizations">Organizations</span>
+                    <img src="howworks2.png" width="36%" style="margin-left: 10%;">
+                </div>
+    
             </div>
             <div class="footer">
                 Copyright &copy2018 Imikoni.org • <a href="#">Privacy</a> • <a href="#">Terms</a> • <a href="#">Security</a>

@@ -16,6 +16,11 @@
           gtag('config', 'UA-122926033-1');
         </script>
         <style>
+            @font-face {
+                font-family: Imikoni;
+                src: url(imikoni.otf);
+            }
+            
             body {
                 margin: 0 auto;
                 font-family: 'Open Sans', Helvetica, sans-serif;
@@ -33,6 +38,12 @@
                 text-transform: uppercase;
             }
             
+            #logo {
+                height: 120px;
+                position: absolute;
+                margin-top: -20px;
+            }
+            
             .heading .tab {
                 float: right;
                 text-transform: uppercase;
@@ -40,65 +51,48 @@
                 margin-top: 16px;
                 margin-right: 75px;
                 font-weight: bold;
-                color: #168EEA;
+                color: #F9BD45;
                 text-decoration: none;
             }
             
             .slideshow .overlay-text {
                 color: white;
                 position: absolute;
-                margin-top: 100px;
-                font-size: 28px;
+                margin-top: 130px;
+                font-size: 32px;
                 margin-left: -500px;
                 width: 1000px;
+                text-shadow: 0px 0px 14px rgba(150, 150, 150, 1);
+                font-family: 'Avenir Next Condensed';
             }
             
             .slideshow img {
                 width: 100%;
+                padding-top: 40px;
             }
             
             .content {
                 padding: 10px;
                 position: absolute;
-                margin-top: 100px;
-                width: 100%;
+                margin-left: 100px;
+                margin-top: 50px;
             }
             
             #content-title {
                 font-size: 42px;
                 margin-top: 30px;
-                position: absolute;
-                margin-left: -28%;
+                font-family: 'Imikoni';
+                float: left;
+                margin-left: 22%;
             }
             
             .content .description {
                 padding: 25px;
                 line-height: 22px;
-                font-size: 18px;
+                font-size: 24px;
+                font-family: 'Avenir Next Condensed';
             }
-            
-            .content input {
-                padding: 10px;
-                border-radius: 5px;
-                border: 1px solid #ECECEC;
-                width: 250px;
-            }
-            
-            .content button {
-                background-color: #168EEA;
-                color: white;
-                padding: 10px;
-                outline: none;
-                border: none;
-                width: 250px;
-                margin-bottom: 20px;
-            }
-            
-            .content button:hover {
-                cursor: pointer;
-                background-color: #0684E5;
-            }
-            
+
             .footer {
                 width: 98.5%;
                 text-align: center;
@@ -117,18 +111,126 @@
                 text-decoration: none;
             }
             
+            input {
+                padding: 8px;
+                width: 25%;
+                border: 1px solid #CCC;
+                font-size: 14px;
+                margin-top: 10px;
+            }
+            
+            input:focus {
+                border: 1px solid #F9BD45;
+                outline: none;
+            }
+            
+            #submit {
+                color: #F9BD45;
+                font-size: 18px;
+                text-transform: uppercase;
+                font-weight: bold;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                margin-top: 10px;
+                padding: 5px;
+                padding-left: 40px;
+                padding-right: 40px;
+                border-radius: 2px;
+            }
+            
+            #submit:hover {
+                cursor: pointer;
+                background-color: FBFBFB;
+            }
+            
+            @media only screen and (max-width: 1250px) {
+                .content {
+                    height: 300px;
+                }
+                
+                .slideshow .overlay-text {
+                    font-size: 26px;
+                }
+            }
+            
+            @media only screen and (max-width: 1050px) {
+                .slideshow .overlay-text {
+                    margin-left: -450px;
+                    margin-top: 110px;
+                    font-size: 20px;
+                }
+                
+                #content-title {
+                    margin-left: 40px;
+                }
+                
+                .content {
+                    margin-left: 0px;
+                    margin-top: 40px;
+                }
+            }
+            
+            @media only screen and (max-width: 800px) {
+                .slideshow .overlay-text {
+                    margin-left: -400px;
+                    margin-top: 90px;
+                }
+                
+                #content-title {
+                    font-size: 32px;
+                }
+            }
+            
             @media only screen and (max-width: 600px) {
-                .heading .tab {
-                    position: absolute;
+                #logo {
                     margin-left: 50px;
                 }
                 
-                .heading img {
-                    margin-top: 11px;
+                .tab {
+                    position: absolute;
+                    width: 100%;
                 }
                 
-                .heading #tab1 {
-                    margin-left: 200px;
+                .slideshow {
+                    margin-top: 30px;
+                }
+                
+                #tab1 {
+                    margin-top: 75px;
+                }
+                
+                #tab2 {
+                    margin-top: 75px;
+                    margin-left: 170px;
+                }
+                
+                #tab3 {
+                    margin-top: 75px;
+                    margin-left: 350px;
+                }
+                
+                .slideshow .overlay-text {
+                    font-size: 16px;
+                    position: absolute;
+                    margin-top: 70px;
+                    margin-left: -580px;
+                }
+                
+                #content-title {
+                    font-size: 22px;
+                    margin-left: 25px;
+                }
+                
+                .content {
+                    margin-left: -40px;
+                    margin-top: 20px;
+                    width: 100%;
+                }
+                
+                .content .description {
+                    font-size: 14px;
+                    margin-left: 25px;
                 }
             }
         </style>
@@ -136,26 +238,32 @@
     <body>
         <div class="container">
             <div class="heading">
-                <img onclick="document.location = 'index.html'" src="logo.png" height="40px"> <!-- Logo Image URL -->
+                <img onclick="document.location = 'index.html'" id="logo" src="logo.png"> <!-- Logo Image URL -->
                 <!--<span id="business-name">'Imi koni</span>-->
                 <a id="tab1" class="tab" href="contact.html">Contact Us</a>
                 <a id="tab2" class="tab" href="howitworks.html">How It Works</a>
+                <a id="tab3" class="tab" href="about.html">About Us</a>
             </div>
             <div class="slideshow">
                 <center><span class="overlay-text"><b>E mālama ‘ia nā pono o ka ‘āina e na ‘ōpio.</b><br />
                     (The traditions of the land are perpetuated by its youth)</span></center>
-                <img src="https://www.orbitmedia.com/wp-content/uploads/2016/08/header-roof-2.jpg">
+                <img src="banner.png">
             </div>
-            <center><span id="content-title">Sorry! We aren't quite ready.</span></center>
-            <div class="content">
-                <center>
-                    <p>Enter your email address in order to be notified when the site goes live.<br />Mahalo for your interest.</p>
-                    <form method="POST" action="signup.html">
-                        <input name="organization" type="text" placeholder="Organization Name"><br />
-                        <input name="email" type="email" placeholder="Email Address"><br />
-                        <button type="submit" value="Submit">Submit</button>
-                    </form>
-                </center>
+            <center><span id="content-title">Still in the works!</span></center>
+            <div class="content" style="width: 97%; margin-left: 0px;">
+                <div class="description"><br />
+                    <center>
+                        Join us by sharing your email. We will update you on relevant analytics as they arise.<br />
+                        Please enter your organization's email address to recieve notifications.<br /><br />
+                        
+                        <form method="POST" action="survey.html">
+                            <input id="organization" type="text" name="organization" placeholder="Organization Name" required><br />
+                            <input id="email" type="email" name="email" placeholder="Email Address" required><br />
+                            <input id="submit" type="submit" value="Notify Me">
+                        </form>
+                    </center>
+                </div>
+    
             </div>
             <div class="footer">
                 Copyright &copy2018 Imikoni.org • <a href="#">Privacy</a> • <a href="#">Terms</a> • <a href="#">Security</a>

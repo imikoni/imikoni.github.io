@@ -75,7 +75,7 @@
                 padding: 10px;
                 position: absolute;
                 margin-left: 100px;
-                margin-top: 40px;
+                margin-top: 50px;
             }
             
             #content-title {
@@ -83,7 +83,7 @@
                 margin-top: 30px;
                 font-family: 'Imikoni';
                 float: left;
-                margin-left: 9%;
+                margin-left: 21%;
             }
             
             .content .description {
@@ -92,46 +92,7 @@
                 font-size: 24px;
                 font-family: 'Avenir Next Condensed';
             }
-            
-            .buttons {
-                position: absolute;
-                margin-top: -150px;
-                margin-left: 800px;
-            }
-            
-            .buttons button {
-                text-transform: uppercase;
-                font-weight: bold;
-                font-size: 13px;
-                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcbf32+0,f2ec7b+100 */
-                background: rgb(252,191,50); /* Old browsers */
-                background: -moz-linear-gradient(45deg, rgba(252,191,50,1) 0%, rgba(242,236,123,1) 100%); /* FF3.6-15 */
-                background: -webkit-linear-gradient(45deg, rgba(252,191,50,1) 0%,rgba(242,236,123,1) 100%); /* Chrome10-25,Safari5.1-6 */
-                background: linear-gradient(45deg, rgba(252,191,50,1) 0%,rgba(242,236,123,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcbf32', endColorstr='#f2ec7b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-                color: white;
-                padding: 13px;
-                padding-right: 35px;
-                padding-left: 35px;
-                outline: none;
-                border: none;
-                width: 350px;
-                margin-bottom: 20px;
-            }
-            
-            .buttons button:hover {
-                cursor: pointer;
-                background-color: #F9BD45;
-            }
-            
-            .buttons .fine-print {
-                font-size: 10px;
-                opacity: 0.7;
-                color: #252525;
-                float: left;
-                margin-top: -15px;
-            }
-            
+
             .footer {
                 width: 98.5%;
                 text-align: center;
@@ -150,10 +111,31 @@
                 text-decoration: none;
             }
             
-            .section {
+            .button {
                 text-transform: uppercase;
                 font-weight: bold;
-                font-size: 18px;
+                font-size: 13px;
+                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcbf32+0,f2ec7b+100 */
+                background: rgb(252,191,50); /* Old browsers */
+                background: -moz-linear-gradient(45deg, rgba(252,191,50,1) 0%, rgba(242,236,123,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(45deg, rgba(252,191,50,1) 0%,rgba(242,236,123,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(45deg, rgba(252,191,50,1) 0%,rgba(242,236,123,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcbf32', endColorstr='#f2ec7b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+                color: white;
+                padding: 13px;
+                padding-right: 35px;
+                padding-left: 35px;
+                outline: none;
+                border: none;
+                width: 350px;
+                margin-bottom: 20px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            
+            .button:hover {
+                cursor: pointer;
+                background-color: #F9BD45;
             }
             
             @media only screen and (max-width: 1250px) {
@@ -163,16 +145,6 @@
                 
                 .slideshow .overlay-text {
                     font-size: 26px;
-                }
-                
-                .buttons {
-                    margin-left: 50px;
-                    margin-top: 0px;
-                    margin-bottom: 100px;
-                }
-                
-                .fine-print {
-                    margin-left: 360px;
                 }
             }
             
@@ -271,16 +243,15 @@
                     (The traditions of the land are perpetuated by its youth)</span></center>
                 <img src="banner.png">
             </div>
-            <center><span id="content-title">Contact Us</span></center>
-            <div class="content">
+            <center><span id="content-title">Quick Survey</span></center>
+            <div class="content" style="width: 97%; margin-left: 0px;">
                 <div class="description"><br />
-                    <span class="section">Email Address</span>
-                    <p>hello@imikoni.org</p>
-                    <span class="section">Follow our Social Media</span><br /><br />
-                    <img src="twitter.jpg" width="40px;" onclick="document.location = 'https://twitter.com/imikoni'">
-                    <img class="at" src="instagram.jpg" width="40px;" onclick="document.location = 'https://instagram.com/imikoni'">
-                    <img class="at" src="facebook.jpg" width="40px;" onclick="document.location = 'https://www.facebook.com/imi.koni.1'">
-                    <span>@imikoni</span>
+                    <center>
+                        Would you be interested in a paid subscription for access to interested volunteers and analytics?<br /><br />
+                        
+                        <button onclick="document.location = 'thankyou.html'" class="button">Yes Please</button>
+                        <button onclick="document.location = 'thankyou.html'" class="button">No, Thank You</button>
+                    </center>
                 </div>
     
             </div>
