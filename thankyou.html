@@ -75,7 +75,7 @@
                 padding: 10px;
                 position: absolute;
                 margin-left: 100px;
-                margin-top: 50px;
+                margin-top: 70px;
             }
             
             #content-title {
@@ -83,7 +83,7 @@
                 margin-top: 30px;
                 font-family: 'Imikoni';
                 float: left;
-                margin-left: 22%;
+                margin-left: 30%;
             }
             
             .content .description {
@@ -111,23 +111,10 @@
                 text-decoration: none;
             }
             
-            #email {
-                padding: 8px;
-                width: 25%;
-                border: 1px solid #CCC;
-                font-size: 14px;
-                margin-top: 10px;
-            }
-            
-            #email:focus {
-                border: 1px solid #F9BD45;
-                outline: none;
-            }
-            
-            #submit {
-                color: #F9BD45;
-                font-size: 18px;
+            .button {
                 text-transform: uppercase;
+                color: #F9BD45;
+                font-size: 16px;
                 font-weight: bold;
                 border: none;
                 outline: none;
@@ -139,7 +126,7 @@
                 border-radius: 2px;
             }
             
-            #submit:hover {
+            .button:hover {
                 cursor: pointer;
                 background-color: FBFBFB;
             }
@@ -249,17 +236,15 @@
                     (The traditions of the land are perpetuated by its youth)</span></center>
                 <img src="banner.png">
             </div>
-            <center><span id="content-title">Still in the works!</span></center>
+            <center><span id="content-title">We are excited to serve with you!</span></center>
             <div class="content" style="width: 97%; margin-left: 0px;">
                 <div class="description"><br />
                     <center>
-                        Join us by sharing your email. We will update you on volunteer opportunities as they appear.<br />
-                        Please enter your email address to recieve notifications.<br /><br />
-                        
-                        <form method="POST" action="thankyou.html">
-                            <input id="email" type="email" name="email" placeholder="Email Address" required><br />
-                            <input id="submit" type="submit" value="Notify Me">
-                        </form>
+                        Hold on tight!<br /><br />
+                        <img src="https://png.icons8.com/ios/1600/down.png" width="30px"><br /><br />
+                        We will email you when our website goes live. Mahalo!
+                        <?php echo $_POST['email'] ?><br /><br /><br />
+                        <span class="button" onclick="document.location = 'index.html'">Return Home</span>
                     </center>
                 </div>
     
